@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://ctrlr.org/wp-content/uploads/2021/11/fall-movies-index-1628968089.jpg);">
+  <div class="container">
+    <h1>Save your best movies</h1>
+    <p>The simplest way to organize your movies</p>
+  </div>
+</div>
+
+
+<h2>My lists</h2>
+
+<div class="cards">
+<% @list.each do |list|%>
+  <%= link_to list_path(list) do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/400/100)">
+      <h3><%= list.name%></h3>
+    </div>
+    <% end %>
+  <% end %>
+</div>

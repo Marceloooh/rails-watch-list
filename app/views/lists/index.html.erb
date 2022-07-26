@@ -5,15 +5,15 @@
   </div>
 </div>
 
-
-<h2>My lists</h2>
-
-<div class="cards">
-<% @list.each do |list|%>
-  <%= link_to list_path(list) do %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/400/100)">
-      <h3><%= list.name%></h3>
-    </div>
+<div class="container mt-5">
+  <h2>My lists</h2>
+  <div class="cards">
+  <% @list.each do |list|%>
+    <%= link_to list_path(list), class: "no-underlign text-center" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/400/100)">
+        <h3><%= list.name%></h3>
+      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
